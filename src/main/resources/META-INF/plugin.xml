@@ -1,19 +1,19 @@
 <idea-plugin>
-    <id>com.github.nawrok.statjintelijplugin</id>
-    <name>statj-intelij-plugin</name>
-    <vendor>nawrok</vendor>
+    <id>com.github.nawrok.statj</id>
+    <name>StatJ</name>
+    <vendor>Nawrok</vendor>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.nawrok.statjintelijplugin.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.nawrok.statjintelijplugin.services.MyProjectService"/>
+        <applicationService serviceImplementation="com.github.nawrok.statj.services.AppService"/>
+        <projectService serviceImplementation="com.github.nawrok.statj.services.StatisticService"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.nawrok.statjintelijplugin.listeners.MyProjectManagerListener"
+        <listener class="com.github.nawrok.statj.listeners.ProjectListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
 </idea-plugin>
