@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.nawrok.statjintelijplugin.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.nawrok.statjintelijplugin.MyBundle
 
 class MyApplicationService {
 
