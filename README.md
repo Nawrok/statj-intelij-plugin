@@ -21,6 +21,8 @@ Plugin for IntelliJ IDEA to display statistics about your project.
 
 <kbd>Analyze</kbd> > <kbd>Show Project Statistics</kbd>
 
+![image](https://user-images.githubusercontent.com/58603575/111219443-5165fa80-85d8-11eb-9b40-30a75e3d7dcc.png)
+
 ---
 
 Plugin based on the [IntelliJ Platform Plugin Template][template].
