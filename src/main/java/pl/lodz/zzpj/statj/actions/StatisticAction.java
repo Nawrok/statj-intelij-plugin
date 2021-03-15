@@ -15,7 +15,8 @@ public class StatisticAction extends AnAction {
     private final StatisticService service = new StatisticService();
 
     @Override
-    public void actionPerformed(@NotNull AnActionEvent e) {
+    public void actionPerformed(@NotNull AnActionEvent e)
+    {
         Project project = Objects.requireNonNull(e.getProject());
         service.setProject(project);
 
@@ -23,11 +24,12 @@ public class StatisticAction extends AnAction {
         Messages.showMessageDialog(project, stats, AppBundle.INSTANCE.getMessage("statistics"), null);
     }
 
-    private String statisticToString(Statistic statistic) {
-        String colon = ": ";
-        char lineBreaker = '\n';
-        return AppBundle.INSTANCE.getMessage("classes") + colon + statistic.getClasses() + lineBreaker +
-                AppBundle.INSTANCE.getMessage("methods") + colon + statistic.getMethods() + lineBreaker +
-                AppBundle.INSTANCE.getMessage("fields") + colon + statistic.getFields();
+    private String statisticToString(Statistic statistic)
+    {
+        return String.format("%-9s%-15s\n", AppBundle.INSTANCE.getMessage("value"),
+                AppBundle.INSTANCE.getMessage("stats_name")) + "-".repeat(17) + '\n' +
+                String.format("%-12s%-15s\n", statistic.getClasses(), AppBundle.INSTANCE.getMessage("classes")) +
+                String.format("%-12s%-15s\n", statistic.getMethods(), AppBundle.INSTANCE.getMessage("methods")) +
+                String.format("%-12s%-15s\n", statistic.getFields(), AppBundle.INSTANCE.getMessage("fields"));
     }
 }
