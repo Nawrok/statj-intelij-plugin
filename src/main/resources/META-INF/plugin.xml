@@ -1,19 +1,21 @@
 <idea-plugin>
-    <id>com.github.nawrok.statj</id>
+    <id>pl.lodz.zzpj.statj</id>
     <name>StatJ</name>
     <vendor>Nawrok</vendor>
+    <version>1.0-SNAPSHOT</version>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
-    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.java</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.nawrok.statj.services.AppService"/>
-        <projectService serviceImplementation="com.github.nawrok.statj.services.StatisticService"/>
-    </extensions>
+    <extensions defaultExtensionNs="com.intellij"/>
 
-    <applicationListeners>
-        <listener class="com.github.nawrok.statj.listeners.ProjectListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
+    <actions>
+        <action id="pl.lodz.zzpj.statj.actions.StatisticAction" class="pl.lodz.zzpj.statj.actions.StatisticAction"
+                text="Show Project Statistics" description="Action that shows project statistics">
+            <add-to-group group-id="AnalyzeMenu" anchor="last"/>
+        </action>
+    </actions>
+
 </idea-plugin>

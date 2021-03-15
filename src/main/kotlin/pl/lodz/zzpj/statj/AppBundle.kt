@@ -1,4 +1,4 @@
-package com.github.nawrok.statj
+package pl.lodz.zzpj.statj
 
 import com.intellij.AbstractBundle
 import org.jetbrains.annotations.NonNls

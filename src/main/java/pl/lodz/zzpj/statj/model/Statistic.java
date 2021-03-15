@@ -1,4 +1,4 @@
-package com.github.nawrok.statj.model;
+package pl.lodz.zzpj.statj.model;
 
 public class Statistic
 {

@@ -4,8 +4,4 @@
 
 ## [Unreleased]
 
-### Added
-
-- Initial scaffold created
-  from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
-- Adjusted initial project structure
+- Snapshot version of StatJ
