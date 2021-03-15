@@ -2,14 +2,11 @@
     <id>pl.lodz.zzpj.statj</id>
     <name>StatJ</name>
     <vendor>Nawrok</vendor>
-    <version>1.0-SNAPSHOT</version>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
-    <depends>com.intellij.modules.lang</depends>
-    <depends>com.intellij.modules.java</depends>
-
-    <extensions defaultExtensionNs="com.intellij"/>
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
 
     <actions>
         <action id="pl.lodz.zzpj.statj.actions.StatisticAction" class="pl.lodz.zzpj.statj.actions.StatisticAction"
