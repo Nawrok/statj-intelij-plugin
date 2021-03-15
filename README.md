@@ -8,6 +8,7 @@
 | ------ | ------ | ------ |
 | Sebastian Nawrocki | 224386 | https://github.com/Nawrok |
 | Bartłomiej Małkowski | 224370 | https://github.com/maalekkk |
+| Maciej Błażewicz | 224264 | https://github.com/blazzeq |
 
 ## Description
 
